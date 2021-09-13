@@ -30,9 +30,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Demo Link
 ```
-https://khinezinthaw7.github.io/todo-vue/index.html
+https://khinezinthaw7.github.io/todo-vue
 ```
-
 - [todo-vue](#todo-vue)
   - [Project setup](#project-setup)
     - [Compiles and hot-reloads for development](#compiles-and-hot-reloads-for-development)
@@ -45,7 +44,7 @@ https://khinezinthaw7.github.io/todo-vue/index.html
   - [Text Input Field](#text-input-field)
   - [Add New Button](#add-new-button)
   - [Done Checkbox](#done-checkbox)
-  - [Done Checkbox](#done-checkbox-1)
+  - [Task Title](#task-title)
   - [Delete Button](#delete-button)
 
 ## Unfinish task count
@@ -63,9 +62,9 @@ The button is to add new task and store to localstorage.
 
 The task is done when click the checkbox.
 
-## Done Checkbox
+## Task Title
 
-The task is done when click the checkbox.
+This is the task title.
 ## Delete Button
 
 This button is to delete the task.
