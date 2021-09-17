@@ -17,7 +17,7 @@
             <td>
               <input
                 type="checkbox"
-                v-model="todo.completed"
+                @click="check(index)"
                 class="form-control-checkbox"
               />
             </td>
@@ -47,16 +47,13 @@ export default {
     return {
       header: "To Do list (Vue)",
       title: "",
-      todos: [
-        { title: "Go Shopping", completed: true },
-        { title: "Buy Book", completed: true },
-        { title: "Read Book", completed: false },
-      ],
+      todos: [],
     };
   },
   methods: {
     view() {
-      this.todos = JSON.parse(localStorage.getItem('tasks'));
+      if(localStorage.getItem('tasks'))
+        this.todos = JSON.parse(localStorage.getItem('tasks'));
     },
     addTask() {
       if (this.title.length != 0) {
@@ -69,8 +66,19 @@ export default {
         this.title = "";
       }
     },
+    check(index) {
+      if(this.todos[index].completed === false) {
+        this.todos[index].completed = true;
+      } else {
+        this.todos[index].completed = false;
+      }
+      localStorage.setItem('tasks', JSON.stringify(this.todos))
+      this.view()
+    },
     deleteTask(index) {
       this.todos.splice(index, 1);
+      localStorage.setItem('tasks', JSON.stringify(this.todos))
+      this.view()
     },
   },
   computed: {
