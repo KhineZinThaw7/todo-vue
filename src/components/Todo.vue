@@ -15,21 +15,12 @@
         <table class="table table-striped table-bordered mt-5">
           <tr class="mb-3" v-for="(todo, index) in todos" :key="index">
             <td>
-              <div v-if="todo.completed">
                 <input
-                  type="checkbox"
+                  type="checkbox" v-model="todo.completed"
                   @click="check(index)"
                   class="form-control-checkbox"
                   checked
                 />
-              </div>
-              <div v-else>
-                <input
-                  type="checkbox"
-                  @click="check(index)"
-                  class="form-control-checkbox"
-                />
-              </div>
             </td>
             <td>
               <span :class="{ done: todo.completed }">{{ todo.title }}</span>
