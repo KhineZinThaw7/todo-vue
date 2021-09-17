@@ -55,6 +55,9 @@ export default {
     };
   },
   methods: {
+    view() {
+      this.todos = JSON.parse(localStorage.getItem('tasks'));
+    },
     addTask() {
       if (this.title.length != 0) {
         let task = {
@@ -62,6 +65,7 @@ export default {
           completed: false,
         };
         this.todos = [...this.todos, task];
+        localStorage.setItem('tasks', JSON.stringify(this.todos));
         this.title = "";
       }
     },
@@ -75,6 +79,9 @@ export default {
       return total.length;
     },
   },
+  created() {
+    this.view();
+  }
 };
 </script>
 

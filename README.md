@@ -32,12 +32,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 https://khinezinthaw7.github.io/todo-vue
 ```
-- [todo-vue](#todo-vue)
-  - [Project setup](#project-setup)
-    - [Compiles and hot-reloads for development](#compiles-and-hot-reloads-for-development)
-    - [Compiles and minifies for production](#compiles-and-minifies-for-production)
-    - [Lints and fixes files](#lints-and-fixes-files)
-    - [Customize configuration](#customize-configuration)
 - [To-Do-List(Vue)](#to-do-listvue)
   - [Demo Link](#demo-link)
   - [Unfinish task count](#unfinish-task-count)
